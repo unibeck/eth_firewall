@@ -25,6 +25,7 @@
 		"wrangler": "2.0.23"
 	},
 	"dependencies": {
+		"ganache": "^7.4.4",
 		"uuid": "^9.0.0"
 	}
 }

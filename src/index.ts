@@ -1,4 +1,5 @@
 import {v4 as uuid} from 'uuid'
+// import ganache from "ganache";
 
 const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
@@ -13,6 +14,10 @@ async function handleRequest(request: Request) {
         ...corsHeaders,
         "request-id": requestId,
     };
+
+    // const accounts = await provider.request({ method: "eth_accounts", params: [] });
+    // console.log(accounts)
+
 
     const response = await fetch(
         new Request('http://localhost:8545', {

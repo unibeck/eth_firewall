@@ -4,6 +4,7 @@
 		"module": "esnext",
 		"target": "es2020",
 		"lib": ["es2020"],
+		"esModuleInterop": true,
 		"strict": true,
 		"alwaysStrict": true,
 		"preserveConstEnums": true,

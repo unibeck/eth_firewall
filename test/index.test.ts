@@ -1,6 +1,16 @@
 import worker from '../src/index';
 
 test('GET /', async () => {
+	// const options = {
+	// 	fork: {
+	// 		url: "http://localhost:8545"
+	// 	},
+	// 	chain: {
+	// 		networkId: 1
+	// 	},
+	// };
+	// const provider = await ganache.provider(options);
+
 	const jsonPayload = {"method":"eth_call","params":[{"to":"0xf49630d0f5ff73bbcb246b0c5de2a0bd04d3014a","data":"0x18160ddd"},"latest"],"id":89,"jsonrpc":"2.0"}
 	const req = new Request('http://localhost:8545', { method: 'GET' });
 	const result = await worker.fetch(req);
