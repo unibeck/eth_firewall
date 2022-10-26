@@ -6,9 +6,21 @@
 			"useESM": true
 		}
 	},
-	"transform": {
-		"^.+\\.(t|j)sx?$": "ts-jest"
+	"extensionsToTreatAsEsm": [".ts"],
+	"moduleNameMapper": {
+		"^(\\.{1,2}/.*)\\.js$": "$1"
 	},
+	"transform": {
+		"^.+\\.(t|j)sx?$": [
+			"ts-jest",
+			{
+				"useESM": true
+			}
+		]
+	},
+	"transformIgnorePatterns": [
+		"/node_modules/(uuid)"
+	],
 	"testRegex": "/test/.*\\.test\\.ts$",
 	"testEnvironment": "miniflare",
 	"testEnvironmentOptions": {

@@ -1,14 +1,16 @@
 {
 	"compilerOptions": {
 		"noEmit": true,
-		"module": "esnext",
 		"target": "es2020",
 		"lib": ["es2020"],
+		"module": "esnext",
+		"moduleResolution": "node",
 		"strict": true,
+		"esModuleInterop": true,
 		"alwaysStrict": true,
 		"preserveConstEnums": true,
-		"moduleResolution": "node",
 		"sourceMap": true,
+		"allowOverwrite": true,
 		"types": [
 			"@cloudflare/workers-types",
 			"@types/jest",
